@@ -1,0 +1,16 @@
+This is to quickly setup a workspace of Kafka with Docker (RH7.5 in VBox)
+
+Steps:
+1. setup RH7.5 in Vbox and get it ready for use (yum source, docker source to CN; necessary installation of docker/docker-compose; network setup for VM)
+2. Define proper docker-compose.yml (the one in env is good. the one in env0 still needs to be fixed.)
+3. use "docker-compose up -d" to start. use "docker ps" to check status
+4. use "docker-compose scale kafka=3" to increase kafka instances. (The scale command is deprecated. Use the up command with the --scale flag instead.)
+5. visit http://192.168.50.199:32836 to manage Kafka with kafka manager (ip and port may be different.)
+
+
+Main References:
+https://www.cnblogs.com/jpfss/p/8616613.html
+https://www.cnblogs.com/jay763190097/p/10292227.html (solution in env0, to be fixed. Referenced in evn1.)
+https://www.jianshu.com/p/8ccd712e2599
+https://github.com/wurstmeister/kafka-docker/blob/master/docker-compose.yml
+https://www.cnblogs.com/dadonggg/p/8205302.html
