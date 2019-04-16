@@ -14,3 +14,8 @@ https://www.cnblogs.com/jay763190097/p/10292227.html (solution in env0, to be fi
 https://www.jianshu.com/p/8ccd712e2599
 https://github.com/wurstmeister/kafka-docker/blob/master/docker-compose.yml
 https://www.cnblogs.com/dadonggg/p/8205302.html
+
+
+Update added 4/16/2019 for step #5 above.
+the port number of Kafka manager could be found by "docker-compose ps"
+the port should be open via "iptables -A INPUT -ptcp --dport  $PORTNUM -j ACCEPT" (use "netstat -anp | grep $PORTNUM" to see whehter port is open). REMEMBER to use "service firewalld stop/start" to reload firewall changes.
